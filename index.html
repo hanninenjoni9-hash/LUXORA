@@ -1,61 +1,105 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LUXORA | Discover Your Luxury</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUXORA TECH</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#0c0c0c;color:#f5f0e8;font-family:Arial,sans-serif}
-header{padding:25px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
-.logo{font-size:30px;letter-spacing:7px;color:#d5b879}
-nav a{color:#eee;text-decoration:none;margin-left:22px;font-size:13px}
-.hero{min-height:470px;padding:100px 8%;background:linear-gradient(90deg,#090909,#29231a);display:flex;flex-direction:column;justify-content:center}
-.hero p{color:#d5b879;letter-spacing:5px;font-size:12px}
-h1{font-size:clamp(42px,8vw,78px);margin:20px 0;letter-spacing:3px}
-.hero h2{font-size:18px;font-weight:normal;color:#ccc}
-.btn{display:inline-block;background:#d5b879;color:#111;padding:15px 28px;margin-top:30px;text-decoration:none;font-weight:bold;width:max-content}
-section{padding:65px 7%}
-.heading{text-align:center;margin-bottom:35px}
-.heading p{color:#d5b879;letter-spacing:4px;font-size:11px}
-.heading h2{font-size:30px;margin-top:12px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
-.product{background:#181818;padding-bottom:22px;text-align:center;border:1px solid #292929}
-.product img{width:100%;height:220px;object-fit:cover;background:#252525}
-.product h3{margin:18px 5px 8px}
-.price{color:#d5b879}
-.product button{background:#d5b879;border:0;padding:12px 22px;margin-top:15px;cursor:pointer;font-weight:bold}
-#cart{color:#d5b879}
-footer{text-align:center;padding:35px;border-top:1px solid #333;color:#aaa}
+*{box-sizing:border-box}
+body{margin:0;background:#090909;color:#fff;font-family:Arial,sans-serif}
+header{padding:25px 15px;text-align:center;border-bottom:1px solid #b99545}
+.logo{font-size:34px;letter-spacing:7px;color:#d6b45e;font-weight:bold}
+header p{color:#aaa;letter-spacing:3px}
+.hero{text-align:center;padding:55px 15px}
+.hero h1{color:#d6b45e;font-size:34px}
+.hero p{color:#ccc}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:20px;max-width:1100px;margin:auto}
+.product{background:#171717;border:1px solid #383024;border-radius:12px;padding:16px;text-align:center}
+.product img{width:100%;height:190px;object-fit:contain;background:#222;border-radius:8px}
+.product h3{min-height:45px}
+.price{color:#d6b45e;font-size:22px;font-weight:bold}
+button{background:#c6a451;color:#090909;border:0;border-radius:6px;padding:12px 18px;font-weight:bold;cursor:pointer}
+button:hover{background:#e5c978}
+.cart{text-align:center;padding:25px;background:#171717;margin:20px}
+footer{text-align:center;padding:30px;color:#999;border-top:1px solid #66532d}
 </style>
 </head>
 <body>
 <header>
 <div class="logo">LUXORA</div>
-<nav><a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#cart">CART (<span id="count">0</span>)</a></nav>
+<p>TECH • ACCESSORIES • STYLE</p>
 </header>
-<div class="hero">
-<p>THE ART OF EVERYDAY LUXURY</p>
-<h1>DISCOVER YOUR<br>LUXURY.</h1>
-<h2>Curated finds. Timeless style. Everyday elegance.</h2>
-<a class="btn" href="#shop">EXPLORE COLLECTION</a>
+
+<section class="hero">
+<h1>Technology meets luxury.</h1>
+<p>Discover the accessories that upgrade your everyday life.</p>
+</section>
+
+<section class="products">
+<div class="product">
+<img src="https://placehold.co/400x300/222222/d6b45e?text=Magnetic+Phone+Stand" alt="Magneettinen puhelinteline">
+<h3>Taitettava magneettinen puhelinteline</h3>
+<p class="price">14,90 €</p>
+<button onclick="add('Magneettinen puhelinteline',14.90)">Lisää ostoskoriin</button>
 </div>
-<section id="shop">
-<div class="heading"><p>THE LUXORA EDIT</p><h2>Trending Collection</h2></div>
-<div class="products">
-<div class="product"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30a?w=500" alt="Kuulokkeet"><h3>Premium Headphones</h3><p class="price">€49.90</p><button onclick="add('Premium Headphones',49.90)">ADD TO CART</button></div>
-<div class="product"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Kello"><h3>Minimalist Watch</h3><p class="price">€39.90</p><button onclick="add('Minimalist Watch',39.90)">ADD TO CART</button></div>
-<div class="product"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Kengät"><h3>Streetwear Sneakers</h3><p class="price">€59.90</p><button onclick="add('Streetwear Sneakers',59.90)">ADD TO CART</button></div>
-<div class="product"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500" alt="Tuoli"><h3>Modern Home Decor</h3><p class="price">€29.90</p><button onclick="add('Modern Home Decor',29.90)">ADD TO CART</button></div>
+
+<div class="product">
+<img src="https://placehold.co/400x300/222222/d6b45e?text=Car+Phone+Holder" alt="Autoteline">
+<h3>Magneettinen autoteline</h3>
+<p class="price">12,90 €</p>
+<button onclick="add('Magneettinen autoteline',12.90)">Lisää ostoskoriin</button>
+</div>
+
+<div class="product">
+<img src="https://placehold.co/400x300/222222/d6b45e?text=Desktop+Stand" alt="Pöytäteline">
+<h3>Säädettävä pöytäpuhelinteline</h3>
+<p class="price">9,90 €</p>
+<button onclick="add('Pöytäpuhelinteline',9.90)">Lisää ostoskoriin</button>
+</div>
+
+<div class="product">
+<img src="https://placehold.co/400x300/222222/d6b45e?text=Magnetic+Wallet" alt="Korttikotelo">
+<h3>Magneettinen korttikotelo</h3>
+<p class="price">14,90 €</p>
+<button onclick="add('Magneettinen korttikotelo',14.90)">Lisää ostoskoriin</button>
+</div>
+
+<div class="product">
+<img src="https://placehold.co/400x300/222222/d6b45e?text=Flexible+Holder" alt="Joustavavartinen teline">
+<h3>Joustavavartinen puhelinteline</h3>
+<p class="price">16,90 €</p>
+<button onclick="add('Joustavavartinen puhelinteline',16.90)">Lisää ostoskoriin</button>
 </div>
 </section>
-<section id="about" class="heading"><p>OUR PHILOSOPHY</p><h2>Luxury in every detail.</h2><p style="margin-top:15px;color:#aaa;letter-spacing:0">LUXORA brings together style, quality and modern living.</p></section>
-<section id="cart"><div class="heading"><h2>Your Shopping Cart</h2></div><div id="items" style="text-align:center">Your cart is empty.</div><p id="total" style="text-align:center;margin-top:20px"></p></section>
-<footer>© 2026 LUXORA. All rights reserved.</footer>
+
+<div class="cart">
+<h2>Ostoskori 🛒</h2>
+<p id="items">Ostoskorisi on tyhjä.</p>
+<p id="total">Yhteensä: 0,00 €</p>
+<button onclick="clearCart()">Tyhjennä ostoskori</button>
+</div>
+
+<footer>
+<p>© 2026 LUXORA TECH</p>
+<p>Technology meets luxury.</p>
+</footer>
+
 <script>
 let cart=[];
-function add(name,price){cart.push({name,price});document.getElementById('count').textContent=cart.length;render()}
-function render(){document.getElementById('items').innerHTML=cart.length?cart.map(x=>x.name+' — €'+x.price.toFixed(2)).join('<br>'):'Your cart is empty.';document.getElementById('total').textContent=cart.length?'Total: €'+cart.reduce((s,x)=>s+x.price,0).toFixed(2):''}
+function add(name,price){
+cart.push({name,price});
+render();
+}
+function render(){
+document.getElementById('items').innerHTML=
+cart.length?cart.map(x=>x.name+' – '+x.price.toFixed(2)+' €').join('<br>'):'Ostoskorisi on tyhjä.';
+let total=cart.reduce((s,x)=>s+x.price,0);
+document.getElementById('total').textContent='Yhteensä: '+total.toFixed(2).replace('.',',')+' €';
+}
+function clearCart(){
+cart=[];
+render();
+}
 </script>
 </body>
 </html>
